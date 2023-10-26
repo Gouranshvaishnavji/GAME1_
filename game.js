@@ -57,12 +57,10 @@ lt.onclick = () => {
     number2 = Math.round(Math.random()*100);
     num.innerHTML = number2;
 };
-
-// Iteration 4: Build a timer for the game
+// Iteration 4: Build a timer for the gamie
 var time=5;
 var timer = document.getElementById("timer");
 var timerId;
-
  function startTimer() {
     time=5;
     time.innerHTML= time;
@@ -75,12 +73,9 @@ var timerId;
     },1000);
     localStorage.setItem("score",score)
  }
-
  function resetTime(intervalId){
     clearInterval(intervalId);
     startTimer();
-
-
  }
 
  startTimer( )
