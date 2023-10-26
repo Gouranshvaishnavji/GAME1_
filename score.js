@@ -1,16 +1,12 @@
-// Iteration 8: Making scoreboard functional
-var urlParams = new URLSearchParams(window.location.search);
+// Iteration 5: Store the player score and display it on the game over screen
+let score = localStorage.getItem("score");
+console.log(score);
 
-var score = urlParams.get("score");
+var scoreBoard = document.getElementById("score-board");
 
-var scoreboard = document.getElementById("score-board");
+var playAgainButton = document.getElementById("play-again-button");
 
-var playAggainButton = document.getElementById("play-again-button");
-
-scoreboard.innerHTML = score;
-
-
-playAggainButton.onclick = () => {
-location.href = "./game.html";
-
+scoreBoard.innerHTML = score;
+playAgainButton.onclick = (evt) => {
+  location.href = "./game.html";
 };
